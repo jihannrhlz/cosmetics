@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\product;
+use App\Models\category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +18,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index',[
+        'categories' => category::all(),
+        'products' => product::all()
+    ]);
 });
+Route::get('/signup', function () {
+    return view('signup');
+});
+Route::get('/product/{product:slug}', [ProductController::class, 'show']);
+Route::get('/category/{category:slug}', [CategoryController::class, 'show']);
