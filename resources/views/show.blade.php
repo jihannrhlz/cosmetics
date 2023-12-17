@@ -58,7 +58,7 @@
     <div class="container">
         <div class="right-box">
             <div class="main-image-box">
-                <img src="../storage/{{ $product->image }}" id="mainImage" class="main-image">
+                <img src="{{ asset('storage/'.$product->image) }}" id="mainImage" class="main-image">
             </div>
         </div>
         <div class="details-box">

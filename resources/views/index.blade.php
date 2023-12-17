@@ -100,7 +100,7 @@
         @foreach ($categories as $category)  
         <a href="category/{{ $category->slug }}">
             <div class="icons">
-                <img src="storage/{{ $category->image }}" alt="{{ $category->name }}">
+                <img src="{{  asset('storage/'. $category->image) }}" alt="{{ $category->name }}">
                 <div class="info">
                     <h3>{{ $category->name }}</h3>
                     <span>{{ $category->description }}</span>

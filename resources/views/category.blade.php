@@ -175,7 +175,7 @@
             @foreach ($products as $product)
             <div class="box">
                 <div class="image">
-                    <img src="../storage/{{ $product->image }}" alt="">
+                    <img src="{{ asset('storage/'. $product->image) }}" alt="">
                     <div class="icons">
                         <a href="#" class="fas fa-heart"></a>
                         <a href="../product/{{ $product->slug }}" class="cart-btn">Show</a>
