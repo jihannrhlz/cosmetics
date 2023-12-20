@@ -5,6 +5,7 @@ use App\Models\category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,8 +24,10 @@ Route::get('/', function () {
         'products' => product::all()
     ]);
 });
-Route::get('/signup', function () {
-    return view('signup');
-});
+Route::get('/signup', [AuthController::class, 'index']);
 Route::get('/product/{product:slug}', [ProductController::class, 'show']);
 Route::get('/category/{category:slug}', [CategoryController::class, 'show']);
+Route::post('/signup/save', [AuthController::class, 'store']);
+Route::get('/login', [AuthController::class, 'login']);
+Route::post('/login', [AuthController::class, 'authenticate']);
+Route::post('/logout', [AuthnController::class, 'logout']);

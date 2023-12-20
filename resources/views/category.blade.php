@@ -177,7 +177,6 @@
                 <div class="image">
                     <img src="{{ asset('storage/'. $product->image) }}" alt="">
                     <div class="icons">
-                        <a href="#" class="fas fa-heart"></a>
                         <a href="../product/{{ $product->slug }}" class="cart-btn">Show</a>
                     </div>
                 </div>

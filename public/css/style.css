@@ -197,8 +197,7 @@ header .icons a:hover {
     background-color: #F7D6D9;
 }
 
-.icons-container .icons {
-    
+.icons-container .icons { 
     border: .1rem solid rgba(0, 0, 0, .1);
     padding: 2rem;
     display: flex;

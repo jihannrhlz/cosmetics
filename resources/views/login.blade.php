@@ -13,14 +13,10 @@
     <body>
     <div class="container">
         <div class="form-box">
-            <h1 id="title">Sign Up</h1>
-            <form id="signupForm" action="/signup/save" method="post">
+            <h1 id="title">Login</h1>
+            <form id="signupForm" action="/login" method="post">
                 @csrf
                 <div class="input-group">
-                    <div class="input-field" id="nameField">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Nama" name="nama">
-                    </div>
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="email" placeholder="E-mail" name="email">
@@ -32,8 +28,8 @@
                     <p>Forgot password? <a href="#">Click Here!</a></p>
                 </div>
                 <div class="btn-field">
-                    <button type="submit" id="signupBtn">Sign Up</button>
-                    {{-- <button type="button" id="loginBtn" class="disable">Log In</button> --}}
+                    {{-- <button type="submit" id="signupBtn">Sign Up</button> --}}
+                    <button type="submit" id="loginBtn">Log In</button>
                 </div>
             </form>
         </div>
